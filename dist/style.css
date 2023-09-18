@@ -1,0 +1,164 @@
+:root {
+    --main-background-color: #FFD6E1;
+    --body-background-color: #FFD6E1;
+    --nav-background-color: #FBC0D4;
+    --button-primary-gradient-start: #FF94B6;
+    --button-primary-gradient-mid: #FFA8C6;
+    --button-primary-gradient-end: #FF94B6;
+    --button-primary-hover-color: #fff;
+    --card-background-color: rgba(255, 214, 225, 0.69);
+    --card-text-color: black;
+    --input-background-color: #FBC0D4;
+    --button-danger-gradient-start: #FF5063;
+    --button-danger-gradient-mid: #FF7D8B;
+    --button-danger-gradient-end: #FF5063;
+    --button-danger-hover-color: #fff;
+    --table-border-color: #FFD6E1;
+    --cart-background-image: url(./frong.png), linear-gradient(to bottom, #FBC0D4 0%, #FFA8C6 50%);
+    --shop-background-image: url(./backgorundimg.jpg), linear-gradient(to bottom, #FBC0D4 0%, #FFA8C6 50%);
+}
+
+/* Apply the pink pastel palette to your styles */
+
+/* Main layout */
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 0.5fr 3fr;
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    grid-template-areas: "login login" "shop cart";
+    background-color: var(--main-background-color);
+}
+
+body {
+    background-color: var(--body-background-color);
+}
+
+nav {
+    background-color: var(--nav-background-color);
+}
+
+/* Login area */
+#login {
+    grid-area: login;
+    padding: 5px 25em;
+}
+
+/* Shop area */
+#shop {
+    grid-area: shop;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    border: 1px solid var(--table-border-color);
+    border-radius: 1em;
+    padding: 3em;
+    background-image: var(--shop-background-image);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: var(--main-background-color);
+    visibility: hidden;
+}
+
+.card {
+    background-color: var(--card-background-color);
+    color: var(--card-text-color);
+    font-size: larger;
+    border: 1px solid var(--table-border-color);
+}
+
+input[type="text"] {
+    background-color: var(--input-background-color);
+    font-weight: bold;
+}
+
+input[type="text"]:focus {
+    background-color: var(--input-background-color);
+}
+
+/* Cart area */
+#cartdiv {
+    grid-area: cart;
+    display: flex;
+    font-size: larger;
+    visibility: hidden;
+    padding: 3em;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid var(--table-border-color);
+    border-radius: 1em;
+    background-image: var(--cart-background-image);
+    background-color: rgba(255, 214, 225, 0.9);
+    background-repeat: no-repeat;
+    background-size: contain;
+   
+}
+
+/* Primary Button */
+.btn-primary {
+    background-image: linear-gradient(
+        to right,
+        var(--button-primary-gradient-start) 0%,
+        var(--button-primary-gradient-mid) 51%,
+        var(--button-primary-gradient-end) 100%
+    );
+    border-color: white;
+    margin: 10px;
+    padding: 15px 25px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 10px #b4b3b3;
+    border-radius: 10px;
+    display: block;
+}
+
+.btn-primary:hover {
+    background-position: right center;
+    border-color: white;
+    color: var(--button-primary-hover-color);
+    text-decoration: none;
+}
+
+/* Danger Button */
+.btn-danger {
+    background-image: linear-gradient(
+        to right,
+        var(--button-danger-gradient-start) 0%,
+        var(--button-danger-gradient-mid) 51%,
+        var(--button-danger-gradient-end) 100%
+    );
+    margin: 10px;
+    padding: 5px 15px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 10px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+.btn-danger:hover {
+    background-position: right center;
+    color: var(--button-danger-hover-color);
+    text-decoration: none;
+}
+
+td {
+    padding: 5px;
+}
+
+#totalbar {
+    border-top: 1px solid var(--table-border-color);
+}
+
+.btn-dark-red {
+    background-color: #950000;
+    border-color: #8B0000;
+}
