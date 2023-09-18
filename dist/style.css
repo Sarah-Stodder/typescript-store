@@ -93,7 +93,7 @@ input[type="text"]:focus {
     background-color: rgba(255, 214, 225, 0.9);
     background-repeat: no-repeat;
     background-size: contain;
-   
+
 }
 
 /* Primary Button */
@@ -152,8 +152,11 @@ input[type="text"]:focus {
 
 td {
     padding: 5px;
+    
 }
-
+tr {
+    background-color: var(--card-background-color)
+}
 #totalbar {
     border-top: 1px solid var(--table-border-color);
 }
